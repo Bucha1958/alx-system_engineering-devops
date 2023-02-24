@@ -10,12 +10,13 @@ d=10
 
 while [ $a -le $d ];
 do
-	echo "Best School";
 
 	if [ "$a" -eq "$b" ]; then
 		echo "bad luck"
 	elif [ "$a" -eq "$c" ]; then
 		echo "good luck"
+	else
+		echo "Best School"
 	fi
 	((a++))
 done
