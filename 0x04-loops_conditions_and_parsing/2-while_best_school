@@ -1,0 +1,10 @@
+#!/usr/bin/env bash
+# A script that displays a sentence ten times
+
+i=1
+
+while [ $i -le 10 ]
+do
+	echo "Best School"
+	((i++))
+done

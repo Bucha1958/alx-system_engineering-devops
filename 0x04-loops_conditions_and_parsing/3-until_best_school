@@ -1,0 +1,11 @@
+#!/usr/bin/env bash
+# Next bash scripting
+
+i=1
+end=10
+
+until [ $i -le $end ];
+do
+	echo "Best School";
+	((i++))
+done
