@@ -2,9 +2,9 @@
 # Next bash scripting
 
 i=1
-end=10
+end=11
 
-until [ $i -le $end ];
+until [ $i -ge $end ];
 do
 	echo "Best School";
 	((i++))

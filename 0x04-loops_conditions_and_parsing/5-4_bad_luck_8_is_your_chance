@@ -1,0 +1,21 @@
+#!/usr/bin/env bash
+# You add condition in your loop
+
+
+a=1
+b=4
+c=8
+d=11
+
+
+while [ $a -ne $d ];
+do
+	echo "Best School";
+
+	if [ "$a" -eq "$b" ]; then
+		echo "bad luck"
+	elif [ "$a" -eq "$c" ]; then
+		echo "good luck"
+	fi
+	((a++))
+done
