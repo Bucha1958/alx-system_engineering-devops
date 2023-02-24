@@ -1,0 +1,9 @@
+#!/usr/bin/env bash
+# List all the files in directory that contains the bash script
+
+list=$(ls)
+
+for n in $list;
+do
+	echo "$n" | cut -d "-" -f 2-
+done
