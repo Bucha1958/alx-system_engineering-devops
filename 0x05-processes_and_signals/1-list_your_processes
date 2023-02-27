@@ -1,0 +1,4 @@
+#!/usr/bin/env bash
+# List your process
+
+ps aux --forest
