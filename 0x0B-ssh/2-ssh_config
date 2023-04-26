@@ -1,0 +1,5 @@
+#!/usr/bin/env bash
+# Authentication file that will configure a server to use only ssh key without password
+Host ubuntu
+	passwordAuthentication no
+	IdentityFile ~/.ssh/id_rsa_do
