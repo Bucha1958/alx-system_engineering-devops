@@ -1,0 +1,3 @@
+#!/usr/bin/env bash
+# Connect to my server with Ubuntu as a user using ssh
+ssh -i ~/.ssh/id_rsa_do ubuntu@54.157.174.94
