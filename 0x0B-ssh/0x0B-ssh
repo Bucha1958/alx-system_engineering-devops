@@ -1,6 +1,1 @@
-#!/usr/bin/env bash
-
-ssh -v ubuntu@54.157.174.94
-mkdir -p ~/.ssh && touch ~/.ssh/authorized_keys
-chmod 744 ~/.ssh && chmod 600 ~/.ssh/authorized_keys
-echo ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQCwT2tIFWktUI1Kg0mn+/dnSWL+rsa8UKZR05+ovJRQkIbK+mbOtCuVcN22gjFwNU3Gx+kTeTMMuJ2zfNaEk5U7GK0V+bt0ALpZIvx2mg6zGIURhQImd+Y1xoYCXKPXbAZYHBo0WjiXly8WHi5XS/UFTYEOhRpB98OeE+U5W+Mv+x1RWR0+fW1BgGXb+4pcszyr/zo99mAebP7+jLoYz/hIdGjVLYEf69l77z72c9szS1Ca3ya21UXJ7NazgxWDR0TmCIoXRFwAH2pE/gF9gUPlgBJEwPeLKszh2de3+gZcpoQ27sWzxdqSD5kuIhRz992DFKNr/Uh94VP/Xh1sYgLT vagrant 
+#!/usr/bin/env bash                                                                                                                                                                                           ssh -v ubuntu@54.157.174.94                                                                            mkdir -p ~/.ssh && touch ~/.ssh/authorized_keys                                                        chmod 744 ~/.ssh && chmod 600 ~/.ssh/authorized_keys                                                   echo ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQCwT2tIFWktUI1Kg0mn+/dnSWL+rsa8UKZR05+ovJRQkIbK+mbOtCuVcN22gjFwNU3Gx+kTeTMMuJ2zfNaEk5U7GK0V+bt0ALpZIvx2mg6zGIURhQImd+Y1xoYCXKPXbAZYHBo0WjiXly8WHi5XS/UFTYEOhRpB98OeE+U5W+Mv+x1RWR0+fW1BgGXb+4pcszyr/zo99mAebP7+jLoYz/hIdGjVLYEf69l77z72c9szS1Ca3ya21UXJ7NazgxWDR0TmCIoXRFwAH2pE/gF9gUPlgBJEwPeLKszh2de3+gZcpoQ27sWzxdqSD5kuIhRz992DFKNr/Uh94VP/Xh1sYgLT vagrant         
