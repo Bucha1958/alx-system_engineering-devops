@@ -1,0 +1,7 @@
+#!/usr/bin/env bash
+# Automating my configuration for second server by setting up my custome header
+sudo apt-get update;
+sudo apt-get -y install nginx;
+fileone='/etc/nginx/sites-available/default'
+sudo sed -i "21i add_header X-Served-By $HOSTNAME;" $fileone
+sudo service nginx restart
