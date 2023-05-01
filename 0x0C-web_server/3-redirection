@@ -2,9 +2,7 @@
 # Configure Nginx server to point to another page
 sudo apt-get install -y nginx
 fileone=/var/www/new_website/index.html
-filetwo=/etc/nginx/sites-available/new_default
-sudo bash -c "echo 'Best School ftw!' > $fileone"
-sudo service nginx restart
-var ="location /redirect_me {\nreturn 301 https://www.youtube.com/watch?v=QH2-TGUIwu4;\n}\n"
-sudo sed -i "301 $var" $fileone
+filetwo=/etc/nginx/sites-enabled/new_default
+var ="{/a location /redirect_me {return 301 https://www.youtube.com/watch?v=QH2-TGUIwu4;}}"
+sudo sed -i "301 $var" $filetwo
 sudo service nginx restart
