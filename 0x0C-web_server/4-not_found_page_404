@@ -1,8 +1,8 @@
 #!/usr/bin/env bash
 # Configure your Nginx server to have a custom 404 page that contains the string
-new="34.239.246.45;\n\tlocation \/redirect_me{\n\t\treturn 301 http:\/\/www.google.com;}"
-sed -i "s/localhost;/$new/" /etc/nginx/sites-available/new_default
-sed -i "s/#error_page 404/error_page 404/" /etc/nginx/sites-available/new_default
+newFile="34.239.246.45;\n\tlocation \/redirect_me{\n\t\treturn 301 http:\/\/www.google.com;}"
+sed -i "s/localhost;/$newFile/" /etc/nginx/sites-available/default
+sed -i "s/#error_page 404/error_page 404/" /etc/nginx/sites-available/default
 touch /usr/share/nginx/html/404.html
 echo "Ceci n'est pas une page" > /usr/share/nginx/html/404.html
 sudo service nginx restart
