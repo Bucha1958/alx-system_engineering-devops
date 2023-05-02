@@ -1,0 +1,15 @@
+#!/usr/bin/env bash
+# Loadbalancer
+sudo apt-get update;
+sudo apt-get -y install haproxy;
+path="
+frontend firstbalance\n\t
+    bind *:80\n\t
+    mode http\n\t
+    option forwardfor\n\t
+    default_backend webservers\n\n
+backend webservers\n\t
+    balance 1616
+"
+echo -e "$path" >> /etc/haproxy/haproxy.cfg
+sudo service haproxy start
