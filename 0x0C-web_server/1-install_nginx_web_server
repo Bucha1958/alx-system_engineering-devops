@@ -1,5 +1,5 @@
 #!/usr/bin/env bash
 # Install nginx web server
 sudo apt-get -y install nginx;
-echo "Hello world!" | sudo tee /var/www/html/index.nginx-debian.html >/dev/null
+echo "Hello World!" | sudo tee /var/www/html/index.nginx-debian.html >/dev/null
 sudo service nginx restart
