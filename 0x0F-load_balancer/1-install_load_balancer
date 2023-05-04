@@ -1,20 +1,16 @@
 #!/usr/bin/env bash
-# Loadbalancer
-if ! command -v haproxy &> /dev/null
-then
-	sudo apt-get update;
-	sudo apt-get -y install haproxy;
-fi
-path="
-frontend firstbalance\n\t
-    bind *:80\n\t
-    mode http\n\t
-    option forwardfor\n\t
-    default_backend webservers\n\n
-backend webservers\n\t
-    balance roundrobin\n\t
-    63215-web-01 54.157.174.94\n\t
-    63215-web-02 100.25.22.146\n\t
-"
-echo -e "$path" >> /etc/haproxy/haproxy.cfg
+#sets up  load balancers
+sudo apt install -y haproxy
+file=/etc/haproxy/haproxy.cfg
+sudo echo -e "frontend haproxynode
+\tbind *:80
+\tmode http
+\tdefault_backend nodes" | sudo tee -a $file
+sudo echo -e "backend nodes
+\tmode http
+\tbalance roundrobin
+\toption forwardfor
+\thttp-request set-header X-Forwarded-Port %[dst_port]
+\tserver 63215-web-01 54.157.174.94:80 check
+\tserver 63215-web-02 100.25.22.146:80 check" | sudo tee -a $file
 sudo service haproxy restart
