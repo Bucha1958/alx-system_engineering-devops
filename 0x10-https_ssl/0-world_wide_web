@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 # display information about subdomains
 
-display_info ()
+display_dns ()
 {
     domain="$1"
     subdomain="$2"
@@ -12,6 +12,6 @@ for subdomain in "www" "lb-01" "web-01" "web-02"
 do
     if [ -z "$2" ] || [ "$2" == "$subdomain" ] ;
     then
-	display_info "$1" "$subdomain"
+	display_dns "$1" "$subdomain"
     fi
 done
