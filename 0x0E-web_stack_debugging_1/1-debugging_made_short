@@ -1,0 +1,5 @@
+#!/usr/bin/env bash
+# debugging can be frustrating
+rm /etc/nginx/sites-enabled/default
+cp /etc/nginx/sites-available/default /etc/nginx/sites-enabled/default
+sudo service nginx restart
