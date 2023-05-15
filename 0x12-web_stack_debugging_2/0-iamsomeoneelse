@@ -1,0 +1,3 @@
+#!/usr/bin/env bash
+# Switching different users
+sudo -u "$1" bash -c whoami
