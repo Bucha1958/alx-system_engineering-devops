@@ -1,0 +1,9 @@
+#!/usr/bin/env bash
+# The script contains database backups which will be compressed
+current_date=$(date + "%d-%m-%Y")
+db_user = "root"
+db_password= "$1"
+backup_file="backup.sql"
+compressed_file="${current_date}.tar.gz"
+mysqldump -u "$db_user" -p"$db_password" --all-databases > backup.sql
+tar -czf "$compressed_file" "$backup_file"
