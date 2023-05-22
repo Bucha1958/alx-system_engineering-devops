@@ -1,6 +1,6 @@
 #!/usr/bin/python3
 """
-    A python script that uses REST API
+    A python script that uses REST API, the users' output 
 """
 import requests
 from sys import argv
@@ -24,8 +24,7 @@ def get_todo_progress(employee_id):
         if task.get("completed") is True:
             number_of_done_tasks += 1
             task_title += "\t " + task.get("title") + "\n"
-    print(f"Employee {employee_name} is done with tasks 
-            ({number_of_done_tasks}/{number_tasks})")
+    print(f"Employee {employee_name} is done with tasks({number_of_done_tasks}/{number_tasks})")
     print(task_title[:-1])
 
 
