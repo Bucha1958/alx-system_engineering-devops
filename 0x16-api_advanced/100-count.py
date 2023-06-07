@@ -1,7 +1,14 @@
+#!/usr/bin/python3
+"""
+Module that contains a function that will 
+"""
 import requests
 
+
 def count_words(subreddit, word_list, after=None, counts={}):
-    url = f"https://www.reddit.com/r/{subreddit}/hot.json?limit=100&after={after}"
+    url = "https://www.reddit.com/r/{}/hot.json?limit=100&after={}".format(
+        subreddit, after
+    )
     headers = {'User-Agent': 'Custom User Agent'}
 
     response = requests.get(url, headers=headers)
@@ -13,7 +20,7 @@ def count_words(subreddit, word_list, after=None, counts={}):
         if not posts:
             sorted_counts = sorted(counts.items(), key=lambda x: (-x[1], x[0].lower()))
             for word, count in sorted_counts:
-                print(f"{word}: {count}")
+                print("{}: {}".format(word, count))
             return
 
         for post in posts:
@@ -33,7 +40,7 @@ def count_words(subreddit, word_list, after=None, counts={}):
         else:
             sorted_counts = sorted(counts.items(), key=lambda x: (-x[1], x[0].lower()))
             for word, count in sorted_counts:
-                print(f"{word}: {count}")
+                print("{}: {}".format(word, count))
             return
 
     else:
