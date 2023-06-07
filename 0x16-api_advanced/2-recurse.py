@@ -6,7 +6,7 @@ import requests
 
 
 def recurse(subreddit, hot_list=[], after=""):
-    url = 'https://www.reddit.com/r/{}/hot.json?after={}'.format(subreddit, after)
+    url = f'https://www.reddit.com/r/{subreddit}/hot.json?after={after}'
     user = {'User-Agent': 'Custom User Agent'}
 
     response = requests.get(url, headers=user)
@@ -23,6 +23,7 @@ def recurse(subreddit, hot_list=[], after=""):
     else:
         return None
     return hot_list
+
 
 def get_children(hot_list, counter, return_list=[]):
     """
