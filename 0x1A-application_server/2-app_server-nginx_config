@@ -1,0 +1,13 @@
+# This config file will make sure my nginx is configured to handle this page
+
+server {
+    listen 80;
+    server_name 54.157.174.94;
+
+    location /airbnb-onepage/ {
+        proxy_pass http://127.0.0.1:5000;
+        proxy_set_header Host $host;
+        proxy_set_header X-Real-IP $remote_addr;
+        proxy_set_header X-Served-By "63215-web-01";
+    }
+}
